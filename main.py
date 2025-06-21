@@ -34,4 +34,5 @@ for number in getbatch():
     clear()
     for num, stat in stats.items():
         print(f"{num}: {stat}")
-    
+
+print("FINAL ^^^")
