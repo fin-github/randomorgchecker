@@ -17,7 +17,7 @@ def resolve_batch(abc: str) -> list[int]:
         
 
 def getbatch() -> list[int]: # gets a random number
-    url: str = "https://www.random.org/integers/?num=100&min=1&max=6&col=1&base=10&format=plain&rnd=new"
+    url: str = "https://www.random.org/integers/?num=500&min=1&max=6&col=1&base=10&format=plain&rnd=new"
     
     res = requests.get(url).text
     
