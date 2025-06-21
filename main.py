@@ -1,4 +1,7 @@
 import requests
+from os import system
+
+def clear(): system("cls")
 
 def resolve_batch(abc: str) -> list[int]:
     tmp = []
@@ -19,3 +22,16 @@ def getbatch() -> list[int]: # gets a random number
     res = requests.get(url).text
     
     return resolve_batch(res)
+
+stats = {}
+for number in getbatch():
+    if not number in stats.keys():
+        stats[number] = 1
+        continue
+    
+    stats[number] += 1
+    
+    clear()
+    for num, stat in stats.items():
+        print(f"{num}: {stat}")
+    
